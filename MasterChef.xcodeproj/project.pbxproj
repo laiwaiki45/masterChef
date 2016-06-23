@@ -12,9 +12,12 @@
 		648927BF1D1A4241006F323A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648927BD1D1A4241006F323A /* Main.storyboard */; };
 		648927C11D1A4241006F323A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 648927C01D1A4241006F323A /* Assets.xcassets */; };
 		648927C41D1A4241006F323A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648927C21D1A4241006F323A /* LaunchScreen.storyboard */; };
+		64BA2A461D1BC62D00AE775F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64BA2A451D1BC62D00AE775F /* GoogleService-Info.plist */; };
+		A55FD50758F6D42553FECEF5 /* Pods_MasterChef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FEA9919982FF0E02F949490 /* Pods_MasterChef.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39CA2A7B799041421974C0A7 /* Pods-MasterChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterChef.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasterChef/Pods-MasterChef.release.xcconfig"; sourceTree = "<group>"; };
 		648927B61D1A4241006F323A /* MasterChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		648927B91D1A4241006F323A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		648927BB1D1A4241006F323A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		648927C01D1A4241006F323A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		648927C31D1A4241006F323A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		648927C51D1A4241006F323A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64BA2A451D1BC62D00AE775F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6FEA9919982FF0E02F949490 /* Pods_MasterChef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasterChef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93475E07525E72713E86FF80 /* Pods-MasterChef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterChef.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasterChef/Pods-MasterChef.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55FD50758F6D42553FECEF5 /* Pods_MasterChef.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1723D33CA7CB4AE998E20482 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				93475E07525E72713E86FF80 /* Pods-MasterChef.debug.xcconfig */,
+				39CA2A7B799041421974C0A7 /* Pods-MasterChef.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		648927AD1D1A4241006F323A = {
 			isa = PBXGroup;
 			children = (
 				648927B81D1A4241006F323A /* MasterChef */,
 				648927B71D1A4241006F323A /* Products */,
+				1723D33CA7CB4AE998E20482 /* Pods */,
+				CEE514148FAC6C713ED13857 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +78,17 @@
 				648927C01D1A4241006F323A /* Assets.xcassets */,
 				648927C21D1A4241006F323A /* LaunchScreen.storyboard */,
 				648927C51D1A4241006F323A /* Info.plist */,
+				64BA2A451D1BC62D00AE775F /* GoogleService-Info.plist */,
 			);
 			path = MasterChef;
+			sourceTree = "<group>";
+		};
+		CEE514148FAC6C713ED13857 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FEA9919982FF0E02F949490 /* Pods_MasterChef.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 648927C81D1A4241006F323A /* Build configuration list for PBXNativeTarget "MasterChef" */;
 			buildPhases = (
+				D08C038915FB7B598CF30BB9 /* [CP] Check Pods Manifest.lock */,
 				648927B21D1A4241006F323A /* Sources */,
 				648927B31D1A4241006F323A /* Frameworks */,
 				648927B41D1A4241006F323A /* Resources */,
+				787342267E7D329F4F6216FC /* [CP] Embed Pods Frameworks */,
+				52F3F24B34C7B1400CE45F3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,12 +153,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				648927C41D1A4241006F323A /* LaunchScreen.storyboard in Resources */,
+				64BA2A461D1BC62D00AE775F /* GoogleService-Info.plist in Resources */,
 				648927C11D1A4241006F323A /* Assets.xcassets in Resources */,
 				648927BF1D1A4241006F323A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52F3F24B34C7B1400CE45F3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MasterChef/Pods-MasterChef-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		787342267E7D329F4F6216FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MasterChef/Pods-MasterChef-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D08C038915FB7B598CF30BB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		648927B21D1A4241006F323A /* Sources */ = {
@@ -249,22 +328,24 @@
 		};
 		648927C91D1A4241006F323A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93475E07525E72713E86FF80 /* Pods-MasterChef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MasterChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.MasterChef;
+				PRODUCT_BUNDLE_IDENTIFIER = "hk.edu.cityu.ee.ee-team.MasterChef";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		648927CA1D1A4241006F323A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39CA2A7B799041421974C0A7 /* Pods-MasterChef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MasterChef/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.MasterChef;
+				PRODUCT_BUNDLE_IDENTIFIER = "hk.edu.cityu.ee.ee-team.MasterChef";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -288,6 +369,7 @@
 				648927CA1D1A4241006F323A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
