@@ -40,7 +40,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Recipe Lists"/>
                                 <connections>
-                                    <segue destination="mJt-qo-BxC" kind="push" id="3L5-C9-JrJ"/>
+                                    <segue destination="sCk-kq-xOf" kind="push" id="CCa-vG-p3f"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xlb-zG-9NE">
@@ -62,10 +62,45 @@
             </objects>
             <point key="canvasLocation" x="1980" y="469"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Table View Controller-->
+        <scene sceneID="DGh-SM-BsM">
+            <objects>
+                <tableViewController id="sCk-kq-xOf" customClass="RecipeTableViewController" customModule="MasterChef" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="GFm-cs-DcE">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="qbe-L6-7zU">
+                                <rect key="frame" x="0.0" y="92" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qbe-L6-7zU" id="4hk-Ng-373">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sCk-kq-xOf" id="nta-UL-F2P"/>
+                            <outlet property="delegate" destination="sCk-kq-xOf" id="jOf-x1-XVq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="cMY-FA-ncf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iu9-i1-1Ha">
+                            <connections>
+                                <segue destination="mJt-qo-BxC" kind="push" id="7Io-yx-vUs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aF9-er-jAn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2263" y="1685"/>
+        </scene>
+        <!--Add Recipe View Controller-->
         <scene sceneID="gVN-wL-895">
             <objects>
-                <viewController id="mJt-qo-BxC" sceneMemberID="viewController">
+                <viewController id="mJt-qo-BxC" customClass="AddRecipeViewController" customModule="MasterChef" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s4b-8h-fVE">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,21 +125,50 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zfb-Wr-xaW">
-                                <rect key="frame" x="33" y="242" width="690" height="249"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steps:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="42b-Ky-haa">
+                                <rect key="frame" x="50" y="499" width="58" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="gtp-V6-iym">
+                                <rect key="frame" x="50" y="535" width="646" height="265"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="O9X-ay-etP">
+                                <rect key="frame" x="50" y="240" width="646" height="265"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" hint="Add ingredients" label="Add ingredients">
+                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" prompt="Recipe List" id="7S3-PU-1NE">
                         <barButtonItem key="backBarButtonItem" title="Back" id="sDn-02-shI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Vcx-hn-KZz">
+                            <connections>
+                                <action selector="RecipeAddDone:" destination="mJt-qo-BxC" id="i7L-4G-497"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="Ingredients" destination="O9X-ay-etP" id="AcT-bY-Iwp"/>
+                        <outlet property="RecipeName" destination="dBF-P7-gFS" id="MBk-qi-unt"/>
+                        <outlet property="RecipeSteps" destination="gtp-V6-iym" id="KJB-KE-TaP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xml-Qd-fXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2904" y="892"/>
+            <point key="canvasLocation" x="3248" y="998"/>
         </scene>
         <!--PlannerViewController-->
         <scene sceneID="D9V-9e-SRK">
@@ -113,78 +177,6 @@
                     <view key="view" contentMode="scaleToFill" id="lNK-Xc-OOz">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="72y-UR-lXU">
-                                <rect key="frame" x="128" y="146" width="513" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Monday"/>
-                                <connections>
-                                    <segue destination="iFg-AF-skb" kind="push" id="EOp-R8-bpm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8Fk-pH-dsv">
-                                <rect key="frame" x="128" y="262" width="513" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Tuesday"/>
-                                <connections>
-                                    <segue destination="iFg-AF-skb" kind="push" id="VMo-6s-fYW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cAZ-0a-4pE">
-                                <rect key="frame" x="128" y="588" width="513" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Friday"/>
-                                <connections>
-                                    <segue destination="iFg-AF-skb" kind="push" id="5jg-No-OVw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="74I-A6-hnU">
-                                <rect key="frame" x="128" y="697" width="513" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Saturday"/>
-                                <connections>
-                                    <segue destination="iFg-AF-skb" kind="push" id="OlS-lF-L0Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RhZ-Hd-V2H">
-                                <rect key="frame" x="128" y="808" width="513" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Sunday"/>
-                                <connections>
-                                    <segue destination="iFg-AF-skb" kind="push" id="4UW-jV-LFV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kcp-IJ-qZa">
-                                <rect key="frame" x="128" y="374" width="513" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Wednesday"/>
-                                <connections>
-                                    <segue destination="iFg-AF-skb" kind="push" id="xEd-Lb-zRv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H5y-SK-sOf">
-                                <rect key="frame" x="128" y="487" width="513" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="Thursday"/>
-                                <connections>
-                                    <segue destination="iFg-AF-skb" kind="push" id="khc-Bl-cod"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ONo-KR-6Sx">
@@ -194,35 +186,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ENN-zN-VAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2885" y="-269"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="eMV-qw-iEu">
-            <objects>
-                <viewController id="iFg-AF-skb" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1gb-ch-SZc">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kQ7-Qd-M2A">
-                                <rect key="frame" x="53" y="84" width="286" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Add from Recipe List"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UwV-ma-OSj">
-                                <rect key="frame" x="390" y="84" width="303" height="99"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Add New"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="akW-uc-eHa"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bWS-3w-1HW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3757" y="-260"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6p2-gH-EhC">
@@ -248,7 +211,4 @@
             <point key="canvasLocation" x="872" y="469"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="xEd-Lb-zRv"/>
-    </inferredMetricsTieBreakers>
 </document>

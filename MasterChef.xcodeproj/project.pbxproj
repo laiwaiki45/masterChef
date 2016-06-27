@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644775B31D20B8B700F2F6ED /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644775B21D20B8B700F2F6ED /* RecipeTableViewController.swift */; };
+		644775B51D20B92D00F2F6ED /* AddRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644775B41D20B92D00F2F6ED /* AddRecipeViewController.swift */; };
 		648927BA1D1A4241006F323A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648927B91D1A4241006F323A /* AppDelegate.swift */; };
 		648927BC1D1A4241006F323A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648927BB1D1A4241006F323A /* ViewController.swift */; };
 		648927BF1D1A4241006F323A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 648927BD1D1A4241006F323A /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		39CA2A7B799041421974C0A7 /* Pods-MasterChef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasterChef.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasterChef/Pods-MasterChef.release.xcconfig"; sourceTree = "<group>"; };
+		644775B21D20B8B700F2F6ED /* RecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		644775B41D20B92D00F2F6ED /* AddRecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRecipeViewController.swift; sourceTree = "<group>"; };
 		648927B61D1A4241006F323A /* MasterChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		648927B91D1A4241006F323A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		648927BB1D1A4241006F323A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				648927C21D1A4241006F323A /* LaunchScreen.storyboard */,
 				648927C51D1A4241006F323A /* Info.plist */,
 				64BA2A451D1BC62D00AE775F /* GoogleService-Info.plist */,
+				644775B21D20B8B700F2F6ED /* RecipeTableViewController.swift */,
+				644775B41D20B92D00F2F6ED /* AddRecipeViewController.swift */,
 			);
 			path = MasterChef;
 			sourceTree = "<group>";
@@ -214,6 +220,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				644775B51D20B92D00F2F6ED /* AddRecipeViewController.swift in Sources */,
+				644775B31D20B8B700F2F6ED /* RecipeTableViewController.swift in Sources */,
 				648927BC1D1A4241006F323A /* ViewController.swift in Sources */,
 				648927BA1D1A4241006F323A /* AppDelegate.swift in Sources */,
 			);
